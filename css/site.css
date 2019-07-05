@@ -1,0 +1,293 @@
+body {
+    font-family: "Crimson Text", "Times New Roman", serif;
+    background-color: #F2FFFC;
+    font-size: 120%;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+.subtitulo-principal {
+    font-family: "Open Sans Condensed", "Arial", sans-serif;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 3em;
+    text-shadow: 3px 3px #000;
+}
+
+.titulo-principal {
+    text-align: center;
+    background-color: #851944;
+    color: #FFF;
+    padding: 2rem;
+    border-bottom: .5rem solid #000;
+}
+
+.subtitulo-texto {
+    font-size: 1.5em;
+    clear: both;
+}
+
+main a {
+    color: #851944;
+}
+
+main p {
+    text-align: justify;
+    margin: 1em 0;
+}
+
+.navegacao-site {
+    text-align: center;
+    background-color: #3C1D3D;
+    color: #F2FFFC;
+    padding: 1em;
+}
+
+.navegacao-site a {
+    color: inherit;
+    font-family: "Open Sans Condensed", "Arial", sans-serif;
+    text-transform: lowercase;
+}
+
+.navegacao-site h1 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.rodape-pagina {
+    color: #F2FFFC;
+    padding: 1em;
+    clear: both;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    text-shadow: 1px 1px black;
+    background-image: radial-gradient(ellipse at left bottom,
+        rgba(60, 29, 61, 0.8),
+        rgba(60, 29, 61, 0.8) 65%,
+        black 65%,
+        black 70%,
+        transparent 70%);
+    background-size: 25% 100%;
+}
+
+.container {
+    width: 80ch;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em 0;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+.icones-redes-sociais li {
+    display: inline-block;
+}
+
+.icones-redes-sociais a {
+    width: 40px;
+    height: 40px;
+    display: block;
+    text-indent: -99999px;
+}
+
+.github {
+    background-image: url(../imagens/github.png);
+}
+
+.twitter {
+    background-image: url(../imagens/twitter.png);
+}
+
+.linkedin {
+    background-image: url(../imagens/linkedin.png);
+}
+
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main {
+    flex-grow: 1;
+    padding-bottom: 4em;
+}
+
+.minha-foto,
+.navegacao-site {
+    border-left: .5em solid black;
+    box-sizing: border-box;
+}
+
+.navegacao-site {
+    padding-top: calc(300px + 1em);
+}
+
+.minha-foto {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 300px;
+    border-bottom: .5em solid black;
+}
+main a:hover, main a:focus, footer a:hover, footer a:focus {
+    color: red;
+}
+
+.navegacao-site a:hover, .navegacao-site a:focus {
+    text-shadow: 0 0 2px pink;
+}
+
+.icones-redes-sociais a {
+    position: relative;
+}
+.icones-redes-sociais a:hover::after,
+.icones-redes-sociais a:focus::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    text-indent: 0;
+    width: 300%;
+    background: black;
+    font-size: .75em;
+}
+
+.icones-redes-sociais a:hover::before,
+.icones-redes-sociais a:focus::before {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-indent: 0;
+    width: 1em;
+    height: 1em;
+    background: black;
+    transform: translateY(50%) rotate(45deg);
+}
+
+legend, label[for="msg"] {
+    font-weight: bold;
+    margin-top: 1em;
+}
+label[for] {
+    display: block;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    /* Força o navegador a usar a mesma fonte da página */
+    font-family: inherit;
+    /* Inclusive o tamanho dela */
+    font-size: 100%;
+    padding: .25em .5em;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+fieldset > fieldset {
+    display: inline;
+}
+
+/* deixar o rótulo dele inline de novo */
+label[for="outro"] {
+    display: inline;
+}
+label[for="nome"] {
+    position: relative;
+}
+
+label[for="nome"]:after {
+    content: "";
+    background-image: url(..//imagens/usuario.png);
+    background-size: 50% 50%;
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #666
+}
+
+#nome {
+    width: calc(100% - 2em);
+    position: relative;
+    left: 2em;
+}
+
+label[for="email"] {
+    position: relative;
+}
+
+label[for="email"]:after {
+    content: "";
+    background-image: url(..//imagens/email.png);
+    background-size: 50% 50%;
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #666
+}
+
+#email {
+    width: calc(100% - 2em);
+    position: relative;
+    left: 2em;
+}
+
+input[value="Outro"] ~ input {
+    display: none;
+}
+
+input[value="Outro"]:checked ~ input {
+    display: inline;
+}
+
+/* deixar só esse campo sem ocupar a tela toda */
+input[name="outro-assunto"] {
+    width: auto;
+}
+input:focus,
+textarea:focus {
+    background-color: #FFD;
+}
+input:invalid {
+    box-shadow: 0 0 3px red;
+}
+button {
+    /* Precisamos tirar a borda que o navegador coloca por padrão */
+    border: 0;
+    padding: .5em 1em;
+    font-family: "Open Sans Condensed", sans-serif;
+    background-color: #3C1D3D;
+    color: white;
+    font-size: 1.2em;
+    /* Faz com que o botão apareça na direita */
+    margin-left: auto;
+    margin-top: 1em;
+    display: block;
+}
+button:hover,
+button:focus {
+    background-color: #8C1D3D;
+}
+
